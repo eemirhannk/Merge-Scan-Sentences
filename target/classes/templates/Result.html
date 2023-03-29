@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Sonuç</title>
+  <style>
+    html{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #1f242d;
+      max-height: 100vh;
+      max-width: 100vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 43vh 55vh 0;
+      position: absolute;
+      border-radius: 20px;
+      background-color: #1f242d;
+      border: 5px solid white
+    }
+    p{
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      font-size: 1.6rem;
+      color: white;
+      letter-spacing: .1rem;
+      font-weight: 600;
+    }
+    span{
+      color: #00eeff;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <p>İşlem sonucu : <span th:text="${inputText}"></span></p>
+</div>
+
+</body>
+</html>

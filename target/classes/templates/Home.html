@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Thymeleaf Demo</title>
+    <style>
+        html{
+            background-color: #1f242d;
+        }
+        .canvas {
+            position: absolute;
+            margin-top: 16%;
+            margin-left: 30%;
+            margin-right: 30%;
+            width: 40%;
+            border-radius: 20px;
+            background-color: #1f242d;
+            border: 10px solid white
+        }
+        div{
+            color: #0ef;
+            font-size: 3.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: #1f242d;
+            padding: 20px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 2rem;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #0ef;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+            cursor: pointer;
+        }
+
+        button{
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: #00eeff;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: #1f242d;
+            letter-spacing: .1rem;
+            font-weight: 600;
+            border: 2px solid;
+            transition: .4s;
+            margin-left: 270px;
+        }
+        button:hover{
+            background-color: #1f242d;
+            color: #00eeff;
+            scale: 1.02;
+            cursor: pointer;
+        }
+        label{
+            margin-left: 290px;
+        }
+        .btn2{
+            margin-left: 36.5%;
+        }
+
+        @media (max-width: 1600px) {
+            .canvas{
+                position: absolute;
+                margin-top: 13%;
+                margin-left: 25%;
+                margin-right: 25%;
+                width: 30%;
+                border-radius: 18px;
+                background-color: #1f242d;
+                border: 7px solid white;
+            }
+            div{
+                color: #0ef;
+                font-size: 2.6rem;
+                font-weight: bold;
+                border-radius: 4px;
+                background-color: #1f242d;
+                padding: 15px;
+            }
+            input[type=text], select {
+                width: 100%;
+                padding: 10px 15px;
+                margin: 10px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-sizing: border-box;
+                font-size: 1.5rem;
+            }
+            input[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: #0ef;
+                padding: 10px 15px;
+                margin: 7px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type=submit]:hover {
+                background-color: #45a049;
+                cursor: pointer;
+            }
+            button{
+                display: inline-block;
+                padding: .7rem 2rem;
+                background-color: #00eeff;
+                border-radius: 3rem;
+                font-size: 1.1rem;
+                color: #1f242d;
+                letter-spacing: .08rem;
+                font-weight: 500;
+                border: 1px solid;
+                transition: .4s;
+                margin-left: 240px;
+            }
+            button:hover{
+                background-color: #1f242d;
+                color: #00eeff;
+                scale: 1.02;
+                cursor: pointer;
+            }
+            label{
+                margin-left: 250px;
+            }
+            .btn2{
+                margin-left: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="canvas">
+    <form action="#" th:action="@{/addText}" method="post">
+
+        <div>
+            <label>Text :</label>
+            <input type="text" name="inputText" th:value="${inputText}" placeholder="Text Giriniz..."/>
+        </div>
+
+        <button type="submit">Birleştir</button>
+    </form>
+    <form action="#" th:action="@{/takeResult}" method="post">
+
+
+        <button class="btn2" type="submit">Kaydet</button>
+    </form>
+
+
+</div>
+</body>
+
+</html>
